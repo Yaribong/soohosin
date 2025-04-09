@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+@theme {
+  /* Define custom theme variables here */
+  --color-primary: #003894; /* 메인 강조색 */
+
+  /* Default theme variables provided by Tailwind are implicitly included */
+  /* You can override them here if needed, e.g.: */
+  /* --color-gray-500: oklch(0.55 0.02 260); */
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -10,13 +19,6 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
