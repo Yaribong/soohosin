@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { formatNumber } from '@/utils/format';
-import ChartDataLabels, { Context } from 'chartjs-plugin-datalabels';
+import dynamic from 'next/dynamic';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -21,7 +21,11 @@ import {
   DoughnutController,
   PieController
 } from 'chart.js';
-import { Bar, Pie } from 'react-chartjs-2';
+import ChartDataLabels, { Context } from 'chartjs-plugin-datalabels';
+
+// Chart.js 컴포넌트를 동적으로 불러옵니다
+const Bar = dynamic(() => import('react-chartjs-2').then(mod => mod.Bar), { ssr: false });
+const Pie = dynamic(() => import('react-chartjs-2').then(mod => mod.Pie), { ssr: false });
 
 ChartJS.register(
   CategoryScale,
