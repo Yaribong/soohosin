@@ -23,7 +23,7 @@ const Solution = () => {
   ];
 
   return (
-    <div className="py-24 bg-gray-50"> {/* Light gray background to differentiate sections */}
+    <div className="py-24 bg-white"> {/* Light gray background to differentiate sections */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -35,7 +35,7 @@ const Solution = () => {
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-4">
             수호신이 제공하는 솔루션
           </h2>
-          <p className="mt-4 text-lg leading-6 text-gray-600 mb-16">
+          <p className="mt-4 text-md lg:text-lg leading-6 text-gray-600 mb-16">
             지역 경제의 선순환을 만드는 수호신의 약속입니다.
           </p>
           <div className="grid grid-cols-1 gap-10 md:grid-cols-3">

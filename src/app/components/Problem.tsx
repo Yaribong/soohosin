@@ -2,23 +2,24 @@
 
 import { motion } from 'framer-motion';
 import { ChartBarIcon, CreditCardIcon, ArrowTrendingUpIcon } from '@heroicons/react/24/outline';
+import ProblemChart from './ProblemChart';
 
 const Problem = () => {
   const problems = [
     {
       icon: CreditCardIcon,
-      title: '신용점수 시스템의 한계',
-      description: '카드매출이 충분한 가게도 낮은 신용점수로 인해 금융 사각지대에 놓여 있습니다.'
+      title: '신용점수 중심의 대출 시스템',
+      description: '카드매출이 충분한 가게도 낮은 신용점수로 인해 금융에서 배제되어 결국 사채시장으로 내몰립니다.',
     },
     {
       icon: ChartBarIcon,
-      title: '대출 이후의 마케팅 공백',
-      description: '단순히 대출만 해주면 끝이 아닙니다. 매출을 키워야 진짜 상환이 가능합니다.'
+      title: '대출만 있고, 성장 지원은 없다',
+      description: '폐업 직전 월 3,000만원 이상을 벌던 가게도 있었습니다. 대출만으로는 부족하고, 매출 성장이 병행돼야 합니다.',
     },
     {
       icon: ArrowTrendingUpIcon,
-      title: '투자자의 소비 참여 부족',
-      description: '투자자와 가게가 연결되지 않으면, 단골은 생기지 않고 수익도 불안정합니다.'
+      title: '과도한 이자 부담',
+      description: '고금리 사채를 이용한 사업자는 작은 대출에도 이자부담으로 운영이 아닌 상환에 몰두하게 됩니다.',
     }
   ];
 
@@ -32,10 +33,16 @@ const Problem = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
             소상공인이 직면한 문제
           </h2>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+          <p className="mt-4 text-md lg:text-lg text-gray-600 mb-16">
+            수호신이 해결하고자 하는 소상공인의 현실입니다
+          </p>
+
+          <ProblemChart />
+
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
             {problems.map((problem, index) => (
               <motion.div
                 key={index}
@@ -43,21 +50,21 @@ const Problem = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className="relative p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+                className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow"
               >
-                <div className="absolute -top-6 left-1/2 transform -translate-x-1/2">
-                  <div className="rounded-full bg-primary/10 p-3">
-                    <problem.icon className="w-6 h-6 text-primary" />
-                  </div>
+                <div className="rounded-full bg-primary/10 p-4 mb-6">
+                    <problem.icon className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="mt-8 text-xl font-semibold text-gray-900">{problem.title}</h3>
-                <p className="mt-4 text-gray-600">{problem.description}</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">{problem.title}</h3>
+                <p className="text-gray-600 flex-grow">{problem.description}</p>
               </motion.div>
             ))}
           </div>
         </motion.div>
       </div>
     </div>
+
+    
   );
 };
 

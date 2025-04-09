@@ -4,19 +4,19 @@ import { motion } from 'framer-motion';
 
 const Hero2 = () => {
   return (
-    <div id="business" className="relative h-screen flex items-center justify-center bg-gradient-to-r from-blue-50 to-indigo-50">
+    <div id="business" className="relative h-screen flex items-center justify-center bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          <h1 className="text-2xl md:text-6xl font-bold text-gray-900 mb-6">
             소상공인의 카드매출 기반 대출과<br />
             매출 증가를 동시에 만들어주는<br />
             <span className="text-primary">지역 투자 플랫폼</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-8">
+          <p className="text-lg md:text-2xl text-gray-600 mb-8">
             투자자는 소비자가 되고, 가게는 성장합니다.<br />
             수호신은 지역경제의 선순환을 이끌어갑니다.
           </p>
