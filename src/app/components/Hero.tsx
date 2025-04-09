@@ -23,7 +23,7 @@ const Hero = () => {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 1 }}
             >
-              <h1 className="text-3xl md:text-5xl font-bold text-gray-900 leading-snug mb-6">
+              <h1 className="text-xl md:text-5xl font-bold text-gray-900 leading-snug mb-6">
                 줄 서 있는 맛집을 보면 <br />
                 <span className="text-primary">&quot;나도 먹어봐야지?&quot;</span>가 아니라 <br />
                 <span className="text-primary">&quot;맛집에 투자해야겠다!&quot;</span>가 떠오른다면?
