@@ -95,6 +95,13 @@ export default function InvestPage() {
         >
           <h1 className="text-3xl font-bold text-gray-900 mb-8 text-center">투자자 설문</h1>
           
+          <div className="mb-8 text-center text-gray-500 text-sm">
+            관계가 금융이 되는 플랫폼 SooHoSin은 현재 서비스 준비중입니다.
+          </div>
+          <div className="mb-8 text-center text-gray-500 text-sm">
+            설문을 토대로 더 나은 서비스로 찾아뵙겠습니다.
+          </div>
+          
           {submitSuccess ? (
             <div className="text-center py-8">
               <h2 className="text-2xl font-semibold text-primary mb-4">제출 완료!</h2>
