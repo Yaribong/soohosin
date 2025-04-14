@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
+import { logButtonClick } from '@/lib/analytics';
 
 const Hero = () => {
   const [showIntro, setShowIntro] = useState(true);
@@ -42,21 +44,28 @@ const Hero = () => {
                 <span className="text-primary">줄서면서 투자하세요.</span>
               </h1>
               <p className="text-lg md:text-xl text-gray-700 mb-8">
-                투자와 소비의 경계를 없애는 <span className="font-semibold text-primary">SooHoSin</span>
+                관계가 금융이 되는 관계 플랫폼 <span className="font-semibold text-primary">SooHoSin</span>
               </p>
               <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ type: 'spring', stiffness: 300 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+                className="flex flex-col sm:flex-row gap-4 mt-8 justify-center items-center"
               >
-                <motion.a
-                  href="mailto:info@soohosin.com"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-primary text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-primary/90 transition-colors inline-flex items-center cursor-pointer"
+                <Link
+                  href="/invest"
+                  onClick={() => logButtonClick('가게 투자하기', '/')}
+                  className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-primary rounded-lg hover:bg-primary/90 transition duration-300"
                 >
-                  투자문의
-                </motion.a>
+                  가게 투자하기
+                </Link>
+                <Link
+                  href="/loan"
+                  onClick={() => logButtonClick('가게 대출받기', '/')}
+                  className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-primary bg-white rounded-lg border-primary border-2 hover:bg-primary/10 hover:text-primary transition duration-300"
+                >
+                  가게 대출받기
+                </Link>
               </motion.div>
             </motion.div>
           )}

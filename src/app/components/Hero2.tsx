@@ -27,7 +27,7 @@ const Hero2 = () => {
               whileTap={{ scale: 0.95 }}
               className="bg-primary text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-primary/90 transition-colors inline-flex items-center cursor-pointer"
             >
-              투자문의
+              수호신 투자문의
             </motion.a>
           </div>
         </motion.div>

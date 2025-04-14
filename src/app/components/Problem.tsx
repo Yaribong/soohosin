@@ -42,7 +42,7 @@ const Problem = () => {
 
           <ProblemChart />
 
-          <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-3 mt-16">
             {problems.map((problem, index) => (
               <motion.div
                 key={index}
