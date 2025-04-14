@@ -175,8 +175,8 @@ export default function InvestPage() {
                 >
                   <option value="">선택해주세요</option>
                   <option value="10만원 미만">10만원 미만</option>
-                  <option value="10-50만원">10-50만원 미만</option>
-                  <option value="50-100만원">50-100만원 미만</option>
+                  <option value="10~50만원">10~50만원 미만</option>
+                  <option value="50~100만원">50~100만원 미만</option>
                   <option value="100만원 이상">100만원 이상</option>
                 </select>
               </div>
