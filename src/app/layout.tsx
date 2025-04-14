@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "소상공인의 수호신",
-  description: "소상공인과 투자자를 연결하는 혁신적인 플랫폼",
+  title: "SooHoSin",
+  description: "관계가 금융이 되는 관계 플랫폼",
 };
 
 export default function RootLayout({
