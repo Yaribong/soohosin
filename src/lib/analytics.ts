@@ -15,6 +15,7 @@ interface InvestmentFormData {
   like_reward: string;
   want_store: string;
   message: string;
+  agreeToTerms: string;
 }
 
 interface LoanFormData {
@@ -34,7 +35,7 @@ interface LoanFormData {
   repayment_plan: string;
   interested_in_subscribe: string;
   message: string;
-  agreeToTerms: boolean;
+  agreeToTerms: string;
 }
 
 export const logPageView = (pageTitle: string, pagePath: string) => {
