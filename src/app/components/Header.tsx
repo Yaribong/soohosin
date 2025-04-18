@@ -3,6 +3,7 @@
 import { useState } from 'react'; // Import useState and useEffect
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'; // Import icons
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { logButtonClick } from '@/lib/analytics';
 
@@ -36,9 +37,10 @@ const Header = () => {
           <Link 
             href="/"
             onClick={() => logButtonClick('로고', '/')}
-            className="flex items-center"
+            className="flex items-center gap-2"
           >
-            <span className="text-2xl font-bold text-primary">SooHoSin</span>
+            <Image src="/images/logo.svg" alt="Logo" width={30} height={30} />
+            <Image src="/images/logo_name.svg" alt="SooHoSin" width={100} height={100} />
           </Link>
 
           {/* Desktop Navigation */}

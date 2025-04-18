@@ -17,7 +17,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "SooHoSin",
-  description: "관계가 금융이 되는 관계 플랫폼",
+  description: "관계가 금융이 되는 플랫폼",
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({
@@ -30,7 +33,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header />
+        <Header />ㄴ
         {children}
         <Footer />
         <Analytics />
